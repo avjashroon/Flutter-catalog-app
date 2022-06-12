@@ -4,6 +4,7 @@ import 'dart:convert';
 
 import 'package:codepur/pages/home_page.dart';
 import 'package:codepur/pages/login_page.dart';
+import 'package:codepur/utils/routs.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,12 +23,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
+      debugShowCheckedModeBanner: false,
 
       initialRoute: "/",
       routes: {
         "/": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage()
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage()
       },
     );
   }
