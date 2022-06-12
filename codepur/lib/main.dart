@@ -1,4 +1,6 @@
-import 'dart:ffi';
+// import 'dart:ffi';
+
+import 'dart:convert';
 
 import 'package:codepur/pages/home_page.dart';
 import 'package:codepur/pages/login_page.dart';
@@ -17,9 +19,11 @@ class MyApp extends StatelessWidget {
       // home: HomePage(),
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      theme: ThemeData(primarySwatch: Colors.purple),
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+      ),
 
-      initialRoute: "/home",
+      initialRoute: "/",
       routes: {
         "/": (context) => LoginPage(),
         "/home": (context) => HomePage(),
